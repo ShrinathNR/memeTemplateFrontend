@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  color: #fdfdfd;
+  margin: 50px;
+}
+.meme {
+  background-color: #121212;
+  max-width: 500px;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.upload {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.eachMemeTemplate {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label,
+button,
+input {
+  margin: 8px;
+}
+
+input,
+select,
+p {
+  background-color: #232323;
+  color: #cacaca;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  caret-color: #cacaca;
+  padding: 5px 10px;
+}
+
+select {
+  margin: 5px;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+}
+.uploadButton {
+  background-color: #5ba6c4;
+}
+.deleteButton {
+  background-color: #cc4c4c;
+  color: #dddddd;
+}
+
+.chooseFile {
+  background-color: #121212;
+}
+
+.eachMemeTemplate {
+  margin: 20px;
+}
+
+.allMemesTemplate {
+  display: grid;
+  gap: 1 rem;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+}
+
+img {
+  max-width: 400px;
 }
